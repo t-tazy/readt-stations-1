@@ -1,0 +1,16 @@
+header {
+  width: 100%;
+  background-color: #66D58B;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#app-title {
+  color: #ffffff;
+  padding: 10px 40px;
+}
+
+header > p {
+  color: #ffffff;
+}
