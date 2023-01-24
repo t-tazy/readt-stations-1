@@ -6,12 +6,14 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 import { ThreadList } from './components/ThreadList';
 import { NewThread } from './components/NewThread';
 import { ErrorPage } from './components/ErrorPage';
+import { PostList } from './components/PostList';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />} errorElement={<ErrorPage />}>
       <Route path="" element={<ThreadList />} />
       <Route path="thread/new" element={<NewThread />} />
+      <Route path="thread/:threadId" element={<PostList />} />
     </Route>
   )
 );
