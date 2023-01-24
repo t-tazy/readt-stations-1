@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import './ThreadList.css';
 
 export const ThreadList = () => {
@@ -14,6 +14,7 @@ export const ThreadList = () => {
       );
       const data = await rsp.json();
       setThreads(data);
+      console.log(data)
     } catch(err) {
       console.error(err)
     }
@@ -26,13 +27,17 @@ export const ThreadList = () => {
   return (
     <div className="thread-container">
       <h1>新着スレッド</h1>
-      {threads.map(thread => {
-        return (
-          <div className="thread" key={thread.id}>
-          <p className="thread-title">{thread.title}</p>
-          </div>
-        );
-      })}
+      <ul>
+        {threads.map(thread => {
+          return (
+            <li key={thread.id}>
+              <Link to={`/thread/${thread.id}`} state={{ title: thread.title }} >
+                <p className="thread">{thread.title}</p>
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 };

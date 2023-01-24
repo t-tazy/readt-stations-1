@@ -1,0 +1,24 @@
+.posts-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.posts {
+  list-style: none;
+  width: 500px;
+}
+
+
+.post {
+  background-color: #fffcfc;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  height: 40px;
+}
+
+.thread-title {
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 200px;
+}
