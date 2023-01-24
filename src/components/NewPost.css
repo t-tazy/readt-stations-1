@@ -1,0 +1,22 @@
+textarea {
+  padding: 10px;
+  width: 400px;
+  height: 100px;
+  margin-bottom: 30px;
+}
+
+.post-form > button {
+  display: block;
+  margin: 0 auto;
+  color: #ffffff;
+  background-color: #66d48b;
+  font-size: 20px;
+  border: none;
+  width: 420px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.post-form button:hover {
+  cursor: pointer;
+}
